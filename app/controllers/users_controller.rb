@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      Resque.enqueue(AvatarProcessor, @user.id, @user.key)
+      @user.remote_avatar_url = @user.avatar.direct_fog_url(:with_path => true)
       redirect_to @user, notice: 'User was successfully created. Waiting for Avatar to be processed. Refresh at will'
     else
       render action: "new"
