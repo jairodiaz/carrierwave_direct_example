@@ -15,7 +15,7 @@
     <%= link_to "Upload Avatar", new_avatar_path %>
   <% end %>
 
-  <%= f.hidden_field :key %>
+  <%= f.text_field :key, size: 200 %>
 
   <div class="actions">
     <%= f.submit %>
