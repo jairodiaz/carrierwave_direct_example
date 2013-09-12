@@ -16,5 +16,5 @@ $ ->
       alert('picture has been loaded in amazon')
 
     #act on result.
-    false # prevents normal behaviour
+    # nothing prevents normal behaviour
 
