@@ -1,3 +1,12 @@
+<% unless @user.has_avatar_upload? %>
+  <%= link_to "Upload Avatar", new_avatar_path %>
+<% end %>
+
+<%= direct_upload_form_for @uploader do |f| %>
+  <%= f.file_field :avatar %>
+  <%= f.submit "Upload Manually - POST" %>
+<% end %>
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -11,11 +20,10 @@
     </div>
   <% end %>
 
-  <% unless @user.has_avatar_upload? %>
-    <%= link_to "Upload Avatar", new_avatar_path %>
-  <% end %>
-
   <%= f.text_field :key, size: 200 %>
+
+  <%= f.label :name, size: 50 %></br>
+  <%= f.text_field :name, size: 50 %>
 
   <div class="actions">
     <%= f.submit %>

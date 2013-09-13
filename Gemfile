@@ -13,3 +13,18 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development, :test, :staging do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request' #uncomment for use with rails pannel
+  gem 'awesome_print'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'hirb'
+  gem 'wirble'
+  gem 'wirb'
+  #gem 'pry-doc'
+  #gem 'pry-nav'
+  gem 'pry'
+end
