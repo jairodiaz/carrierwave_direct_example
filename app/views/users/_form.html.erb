@@ -1,10 +1,5 @@
-<% unless @user.has_avatar_upload? %>
-  <%= link_to "Upload Avatar", new_avatar_path %>
-<% end %>
-
 <%= direct_upload_form_for @uploader do |f| %>
   <%= f.file_field :avatar %>
-  <%= f.submit "Upload Manually - POST" %>
 <% end %>
 
 <%= form_for(@user) do |f| %>
