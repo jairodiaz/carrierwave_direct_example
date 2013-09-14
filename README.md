@@ -18,35 +18,35 @@ Install the example application:
 
 Example Policy:
 
-  {
-    "Version": "<<Version Value>>",
-    "Id": "<<Policy Value>>",
-    "Statement": [
-      {
-        "Sid": "<<Sid Value>>",
-        "Effect": "Allow",
-        "Principal": {
-          "AWS": "*"
-        },
-        "Action": "s3:*",
-        "Resource": "arn:aws:s3:::<<bucket-name>>/*"
-      }
-    ]
-  }
+    {
+      "Version": "<<Version Value>>",
+      "Id": "<<Policy Value>>",
+      "Statement": [
+        {
+          "Sid": "<<Sid Value>>",
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": "*"
+          },
+          "Action": "s3:*",
+          "Resource": "arn:aws:s3:::<<bucket-name>>/*"
+        }
+      ]
+    }
 
 Example CORS Configuration:
 
-  <?xml version="1.0" encoding="UTF-8"?>
-  <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
-      <CORSRule>
-          <AllowedOrigin>*</AllowedOrigin>
-          <AllowedMethod>POST</AllowedMethod>
-          <AllowedMethod>GET</AllowedMethod>
-          <AllowedMethod>PUT</AllowedMethod>
-          <AllowedMethod>DELETE</AllowedMethod>
-          <AllowedMethod>HEAD</AllowedMethod>
-          <MaxAgeSeconds>3000</MaxAgeSeconds>
-          <AllowedHeader>Authorization</AllowedHeader>
-          <ExposeHeader>Location</ExposeHeader>
-      </CORSRule>
-  </CORSConfiguration>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+        <CORSRule>
+            <AllowedOrigin>*</AllowedOrigin>
+            <AllowedMethod>POST</AllowedMethod>
+            <AllowedMethod>GET</AllowedMethod>
+            <AllowedMethod>PUT</AllowedMethod>
+            <AllowedMethod>DELETE</AllowedMethod>
+            <AllowedMethod>HEAD</AllowedMethod>
+            <MaxAgeSeconds>3000</MaxAgeSeconds>
+            <AllowedHeader>Authorization</AllowedHeader>
+            <ExposeHeader>Location</ExposeHeader>
+        </CORSRule>
+    </CORSConfiguration>
