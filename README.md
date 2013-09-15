@@ -18,7 +18,11 @@ Install the example application:
     cd carrierwave_direct_example
     bundle install --path vendor
     bundle exec rake db:migrate
+
+Add file config/initializers/carrierwave.rb with the Amazon S3 credentials, configure the Amazon bucket as described in the next section. Execute the server with:
+
     bundle exec rails s
+
 
 ## AMAZON S3 BUCKET CONFIGURATION
 
