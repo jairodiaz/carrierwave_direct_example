@@ -38,6 +38,6 @@ form { display: block; margin: 20px auto; background: #eee; border-radius: 10px;
   <%= f.text_field :name, size: 50 %>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit id: 'create_button', :disabled => true %>
   </div>
 <% end %>

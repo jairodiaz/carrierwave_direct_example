@@ -41,6 +41,7 @@ $(document).ready(function() {
       uploadEnd();
 
       $("#user_key").val(key);
+      $('#create_button').enable();
   }
 
 //Documentation at:

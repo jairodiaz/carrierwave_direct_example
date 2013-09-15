@@ -7,8 +7,8 @@ The application uses Cross-Origin Resource Sharing to upload to Amazon S3 using 
 The application does not implement post-procesing (image resizing, version generation) of the uploaded image.
 This should be implemented as described by https://github.com/dwilkie/carrierwave_direct_example using background jobs.
 
-A railscast on this topic is http://railscasts.com/episodes/383-uploading-to-amazon-s3.
-A detail explanation is http://pjambet.github.io/blog/direct-upload-to-s3/
+A railscast on this topic is at http://railscasts.com/episodes/383-uploading-to-amazon-s3.
+A detailed explanation is at http://pjambet.github.io/blog/direct-upload-to-s3/
 
 ## Installation
 
