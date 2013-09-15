@@ -8,6 +8,7 @@ The application does not implement post-procesing (image resizing, version gener
 This should be implemented as described by https://github.com/dwilkie/carrierwave_direct_example using background jobs.
 
 A railscast on this topic is http://railscasts.com/episodes/383-uploading-to-amazon-s3.
+A detail explanation is http://pjambet.github.io/blog/direct-upload-to-s3/
 
 ## Installation
 
@@ -51,7 +52,7 @@ Example CORS Configuration:
             <AllowedMethod>DELETE</AllowedMethod>
             <AllowedMethod>HEAD</AllowedMethod>
             <MaxAgeSeconds>3000</MaxAgeSeconds>
-            <AllowedHeader>Authorization</AllowedHeader>
             <ExposeHeader>Location</ExposeHeader>
+            <AllowedHeader>*</AllowedHeader>
         </CORSRule>
     </CORSConfiguration>
