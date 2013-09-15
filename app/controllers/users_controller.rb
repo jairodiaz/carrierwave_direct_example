@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      #To process thumbnails this has to be executed in a background job:
+      #To post-process thumbnails and other version sizes this has to be executed in a background job:
       #@user.remote_avatar_url = @user.avatar.direct_fog_url(:with_path => true)
       redirect_to @user, notice: 'User was successfully created. Waiting for Avatar to be processed. Refresh at will'
     else

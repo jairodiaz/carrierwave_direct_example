@@ -44,14 +44,12 @@ $(document).ready(function() {
       $('#create_button').enable();
   }
 
-//Documentation at:
-//http://malsup.com/jquery/form/#ajaxForm
-
+  //Documentation at:
+  //http://malsup.com/jquery/form/#ajaxForm
   var options = {
     beforeSubmit:  showRequest,  // pre-submit callback
     success:       showResponse,  // post-submit callback
-    uploadProgress: uploadProgress,
-    type:'post'
+    uploadProgress: uploadProgress
   };
 
   $('#new_avatar_uploader').ajaxForm(options);
